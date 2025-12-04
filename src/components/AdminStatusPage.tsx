@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useStatus } from "../contexts/StatusContext";
-import { ArrowLeft, LogOut, Lock } from "lucide-react";
+import { ArrowLeft, LogOut } from "lucide-react";
+import imgLogo from "figma:asset/ffb797a5013414fb5ec5ef7942c0d0d67acbb767.png";
 
 interface AdminStatusPageProps {
     onBack: () => void;
@@ -39,37 +40,35 @@ export default function AdminStatusPage({ onBack }: AdminStatusPageProps) {
     if (!isAuthenticated) {
         return (
             <div className="min-h-screen bg-gray-50 flex items-center justify-center p-4 font-sans">
-                <div className="max-w-md w-full bg-white rounded-md shadow-lg overflow-hidden">
+                <div className="w-full max-w-[400px] bg-white rounded-lg shadow-xl overflow-hidden">
                     <div className="p-10">
                         <div className="flex justify-center mb-8">
-                            <div className="bg-gray-100 p-4 rounded-full">
-                                <Lock className="w-6 h-6 text-gray-800" />
-                            </div>
+                            <img src={imgLogo} alt="Bannalp Logo" className="h-16 w-auto" />
                         </div>
-                        <h2 className="text-2xl font-bold text-center text-gray-900 mb-2 uppercase tracking-wide">
+                        <h2 className="text-xl font-bold text-center text-gray-900 mb-2 uppercase tracking-wider">
                             Admin Login
                         </h2>
-                        <p className="text-center text-gray-500 mb-8 text-sm uppercase tracking-wider">
+                        <p className="text-center text-gray-500 mb-8 text-xs uppercase tracking-widest">
                             Status Verwaltung
                         </p>
 
-                        <form onSubmit={handleLogin} className="space-y-6">
+                        <form onSubmit={handleLogin} className="space-y-5">
                             <div>
                                 <input
                                     type="password"
                                     value={password}
                                     onChange={(e) => setPassword(e.target.value)}
-                                    className="w-full px-4 py-3 border border-gray-200 rounded-md focus:ring-2 focus:ring-gray-900 focus:border-transparent outline-none transition-all bg-gray-50"
-                                    placeholder="Passwort eingeben"
+                                    className="w-full px-4 py-3 border border-gray-200 rounded-md focus:ring-1 focus:ring-gray-900 focus:border-gray-900 outline-none transition-all bg-gray-50 text-sm placeholder:text-gray-400"
+                                    placeholder="PASSWORT EINGEBEN"
                                 />
                                 {error && (
-                                    <p className="mt-2 text-xs text-red-600 uppercase tracking-wide font-medium">{error}</p>
+                                    <p className="mt-2 text-xs text-red-600 uppercase tracking-wide font-medium text-center">{error}</p>
                                 )}
                             </div>
 
                             <button
                                 type="submit"
-                                className="w-full bg-gray-900 hover:bg-black text-white font-medium py-3 px-4 rounded-md transition-colors duration-200 uppercase tracking-wider text-sm"
+                                className="w-full bg-gray-900 hover:bg-black text-white font-medium py-3 px-4 rounded-md transition-colors duration-200 uppercase tracking-widest text-xs"
                             >
                                 Anmelden
                             </button>
@@ -78,7 +77,7 @@ export default function AdminStatusPage({ onBack }: AdminStatusPageProps) {
                         <div className="mt-8 text-center">
                             <button
                                 onClick={onBack}
-                                className="text-xs text-gray-400 hover:text-gray-600 font-medium uppercase tracking-wider transition-colors"
+                                className="text-[10px] text-gray-400 hover:text-gray-600 font-medium uppercase tracking-widest transition-colors"
                             >
                                 ← Zurück zur Website
                             </button>
