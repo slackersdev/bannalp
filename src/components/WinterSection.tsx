@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { ChevronLeft, Snowflake, Mountain, Bike, Users } from 'lucide-react';
+import { ChevronLeft, Snowflake, Mountain, Users } from 'lucide-react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 
 interface WinterSectionProps {
@@ -12,14 +12,14 @@ const winterActivities = [
     title: 'Schneeschuhlaufen',
     category: 'Winteraktivität',
     icon: Snowflake,
-    description: 'Entdecken Sie die verschneite Winterlandschaft der Bannalp auf markierten Schneeschuhpfaden.',
+    description: 'Markierter Schneeschuhpfad mit verschiedenen Routen und Schneeschuhvermietung an der Talstation.',
     items: [
-      'Markierter Schneeschuhpfad',
-      'Schneeschuhtouren im Mondschein',
-      'Schneeschuhvermietung an der Talstation'
+      'Schneeschuhmiete inkl. Stöcke Fr. 10.- / Tag',
+      'Schneeschuhtouren im Mondschein mit Raclette oder Spaghetti-Plausch',
+      'Markierte Schneeschuhpfade mit verschiedenen Routen'
     ],
     image: 'snowshoeing mountain',
-    details: 'Der Schneeschuhpfad ist täglich geöffnet und bietet atemberaubende Ausblicke auf die Urner Alpen.'
+    details: 'Mondschein-Touren inklusive Luftseilbahn retour, Schneeschuhmiete, Führung, Apero und Essen in der Lägernhütte. Ab 6 Personen, max. 16 Personen, nur auf Voranmeldung. Fr. 64.-/Person'
   },
   {
     id: 2,
@@ -29,11 +29,11 @@ const winterActivities = [
     description: 'Die Bergstation Chrüzhütte 1715 m.ü.M. ist Ausgangspunkt zahlreicher Ski-, Snowboard- und Schneeschuhtouren.',
     items: [
       'Ausgangspunkt Chrüzhütte 1715 m.ü.M.',
-      'Verschiedene Schwierigkeitsgrade',
-      'Lawinensichere markierte Routen'
+      'Ski- und Snowboardtouren',
+      'Winterpanoramakarte verfügbar'
     ],
     image: 'ski touring snow',
-    details: 'Bitte beachten Sie die aktuellen Lawinenwarnungen und Sicherheitshinweise.'
+    details: 'Tourenvorschläge ab Bergstation Chrüzhütte 1715 m.ü.M. - ideal für erfahrene Tourengeher.'
   },
   {
     id: 3,
@@ -42,31 +42,31 @@ const winterActivities = [
     icon: Users,
     description: 'Familienfreundliches Skigebiet mit zwei Skiliften und gemütlicher Schneebar.',
     items: [
-      'Zwei moderne Skilifte',
-      'Gemütliche Schneebar',
-      'Ideal für Familien und Anfänger'
+      'Zwei Skilifte',
+      'Gemütliche Schneebar Nätschboden',
+      'Ideal für Familien'
     ],
     image: 'ski lift family',
-    details: 'Die Skilifte sind täglich von 08:30 bis 16:30 Uhr geöffnet (wetterabhängig).'
+    details: 'Die Skilifte und Schneebar sind bei Skiliftbetrieb geöffnet. Weitere Informationen finden Sie beim Skilift-Verein-Bannalp.'
   }
 ];
 
 const winterInfo = [
   {
-    title: 'Wintersaison 2024/2025',
-    description: 'Die Skilifte und Schneebar sind täglich von 08:30 bis 16:30 Uhr geöffnet (wetterabhängig).'
+    title: 'Schneeschuhmiete',
+    description: 'Schneeschuhe inkl. Stöcke Fr. 10.- pro Tag. Miete an der Talstation verfügbar.'
   },
   {
-    title: 'Schneeverhältnisse',
-    description: 'Aktuelle Schneehöhen und Pistenbedingungen finden Sie in unserem täglichen Schneebericht.'
+    title: 'Markierte Schneeschuhpfade',
+    description: 'Bergstation Chrüzhütte - Bannalpsee - Berggasthaus Urnerstaffel - Chrüzhütte (2 Std. 30 Min) oder Chrüzhütte - Nätschboden - Chrüzhütte (1 Std. 30 Min).'
   },
   {
-    title: 'Ausrüstungsverleih',
-    description: 'Schneeschuhe und weitere Winterausrüstung können an der Talstation gemietet werden.'
+    title: 'Schneebar',
+    description: 'Herzlich willkommen an der Schneebar Nätschboden. Bei Skiliftbetrieb haben wir für Sie geöffnet und verwöhnen Sie mit einer kleinen, aber feinen Karte.'
   },
   {
-    title: 'Sicherheit',
-    description: 'Bitte beachten Sie die aktuellen Lawinenwarnungen und bleiben Sie auf den markierten Wegen.'
+    title: 'Tourengebiet',
+    description: 'Tourenvorschläge ab Bergstation Chrüzhütte 1715 m.ü.M. Bitte beachten Sie die aktuellen Lawinenwarnungen.'
   }
 ];
 
