@@ -545,7 +545,7 @@ export default function LiftStatusSection() {
                               }`}
                             size={10}
                           />
-                          <span>{facility.name}</span>
+                          <span>{facility.name} <span className={facility.status === 'open' ? 'text-green-700' : 'text-red-900'}>{facility.status === 'open' ? 'Offen' : 'Geschlossen'}</span></span>
                         </div>
                       ))}
                     </div>
@@ -564,7 +564,7 @@ export default function LiftStatusSection() {
                               }`}
                             size={10}
                           />
-                          <span>{facility.name}</span>
+                          <span>{facility.name} <span className={facility.status === 'open' ? 'text-green-700' : 'text-red-900'}>{facility.status === 'open' ? 'Offen' : 'Geschlossen'}</span></span>
                         </div>
                       ))}
                     </div>
@@ -583,7 +583,7 @@ export default function LiftStatusSection() {
                               }`}
                             size={10}
                           />
-                          <span>{facility.name}</span>
+                          <span>{facility.name} <span className={facility.status === 'open' ? 'text-green-700' : 'text-red-900'}>{facility.status === 'open' ? 'Offen' : 'Geschlossen'}</span></span>
                         </div>
                       ))}
                     </div>
@@ -602,7 +602,7 @@ export default function LiftStatusSection() {
                               }`}
                             size={10}
                           />
-                          <span>{facility.name}</span>
+                          <span>{facility.name} <span className={facility.status === 'open' ? 'text-green-700' : 'text-red-900'}>{facility.status === 'open' ? 'Offen' : 'Geschlossen'}</span></span>
                         </div>
                       ))}
                     </div>
@@ -638,7 +638,7 @@ export default function LiftStatusSection() {
                             }`}
                           size={10}
                         />
-                        <span>{facility.name}</span>
+                        <span>{facility.name} <span className={facility.status === 'open' ? 'text-green-700' : 'text-red-900'}>{facility.status === 'open' ? 'Offen' : 'Geschlossen'}</span></span>
                       </div>
                     ))}
                   </div>
@@ -657,7 +657,7 @@ export default function LiftStatusSection() {
                             }`}
                           size={10}
                         />
-                        <span>{facility.name}</span>
+                        <span>{facility.name} <span className={facility.status === 'open' ? 'text-green-700' : 'text-red-900'}>{facility.status === 'open' ? 'Offen' : 'Geschlossen'}</span></span>
                       </div>
                     ))}
                   </div>
@@ -676,7 +676,7 @@ export default function LiftStatusSection() {
                             }`}
                           size={10}
                         />
-                        <span>{facility.name}</span>
+                        <span>{facility.name} <span className={facility.status === 'open' ? 'text-green-700' : 'text-red-900'}>{facility.status === 'open' ? 'Offen' : 'Geschlossen'}</span></span>
                       </div>
                     ))}
                   </div>
