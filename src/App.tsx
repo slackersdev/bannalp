@@ -3,7 +3,7 @@ import Header from "./components/Header";
 import HeroSection from "./components/HeroSection";
 import AboutSection from "./components/AboutSection";
 import LiftStatusSection from "./components/LiftStatusSection";
-import WeatherSection from "./components/WeatherSection";
+import LivecamSection from "./components/LivecamSection";
 import NewsSection from "./components/NewsSection";
 import ContactSection from "./components/ContactSection";
 import Footer from "./components/Footer";
@@ -81,7 +81,7 @@ function AppContent() {
         <HeroSection />
         <AboutSection />
         <LiftStatusSection />
-        <WeatherSection />
+        <LivecamSection />
         <NewsSection />
         <ContactSection />
       </main>

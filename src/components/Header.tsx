@@ -97,6 +97,15 @@ export default function Header({ onNavigate }: HeaderProps) {
                 >
                   <button
                     onClick={() => {
+                      scrollToSection('livecam');
+                      setIsInfoOpen(false);
+                    }}
+                    className="block w-full text-left px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-blue-600 transition-colors text-sm font-medium border-b border-gray-50"
+                  >
+                    Livecam
+                  </button>
+                  <button
+                    onClick={() => {
                       onNavigate('preise');
                       setIsInfoOpen(false);
                     }}
