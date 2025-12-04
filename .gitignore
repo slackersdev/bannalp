@@ -123,3 +123,7 @@ dist
 # Vite
 dist-ssr
 *.local
+
+#original content
+original_content/
+
