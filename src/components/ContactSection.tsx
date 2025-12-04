@@ -66,46 +66,18 @@ export default function ContactSection() {
               </div>
             </div>
 
-            <div className="bg-white rounded-md shadow-lg p-8">
-              <h3 className="mb-6 uppercase tracking-wider border-b border-gray-200 pb-3">
-                Nachricht senden
-              </h3>
-              <form className="space-y-4">
-                <div>
-                  <label className="block mb-2 text-gray-700 uppercase tracking-wider" style={{ fontSize: '11px' }}>Name</label>
-                  <input
-                    type="text"
-                    className="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:border-gray-600 bg-white"
-                    placeholder="Ihr Name"
-                    style={{ fontSize: '13px' }}
-                  />
-                </div>
-                <div>
-                  <label className="block mb-2 text-gray-700 uppercase tracking-wider" style={{ fontSize: '11px' }}>Email</label>
-                  <input
-                    type="email"
-                    className="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:border-gray-600 bg-white"
-                    placeholder="ihre@email.ch"
-                    style={{ fontSize: '13px' }}
-                  />
-                </div>
-                <div>
-                  <label className="block mb-2 text-gray-700 uppercase tracking-wider" style={{ fontSize: '11px' }}>Nachricht</label>
-                  <textarea
-                    rows={5}
-                    className="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:border-gray-600 resize-none bg-white"
-                    placeholder="Ihre Nachricht"
-                    style={{ fontSize: '13px' }}
-                  />
-                </div>
-                <button
-                  type="submit"
-                  className="w-full bg-black text-white py-3 rounded-md hover:bg-gray-800 transition-colors uppercase tracking-wider"
-                  style={{ fontSize: '12px' }}
-                >
-                  Senden
-                </button>
-              </form>
+            <div className="bg-white rounded-md shadow-lg overflow-hidden h-[400px] lg:h-auto min-h-[400px]">
+              <iframe
+                width="100%"
+                height="100%"
+                id="gmap_canvas"
+                src="https://maps.google.com/maps?q=Luftseilbahnen%20Bannalp%20AG%2C%20Fell3%2C%206387%20Oberrickenbach&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                frameBorder="0"
+                scrolling="no"
+                marginHeight={0}
+                marginWidth={0}
+                title="Google Maps Location"
+              ></iframe>
             </div>
           </div>
         </motion.div>
