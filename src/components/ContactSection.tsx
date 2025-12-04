@@ -27,7 +27,7 @@ export default function ContactSection() {
                   </div>
                   <div>
                     <div className="text-gray-600 mb-1 uppercase tracking-wider" style={{ fontSize: '11px' }}>Adresse</div>
-                    <div style={{ fontSize: '13px' }}>Bannalp Bergbahnen AG<br />6467 Schattdorf<br />Schweiz</div>
+                    <div style={{ fontSize: '13px' }}>Luftseilbahnen Bannalp AG<br />Fell3<br />6387 Oberrickenbach<br />Schweiz</div>
                   </div>
                 </div>
 
@@ -37,7 +37,7 @@ export default function ContactSection() {
                   </div>
                   <div>
                     <div className="text-gray-600 mb-1 uppercase tracking-wider" style={{ fontSize: '11px' }}>Telefon</div>
-                    <div style={{ fontSize: '13px' }}>+41 41 878 00 44</div>
+                    <div style={{ fontSize: '13px' }}>+41 41 628 16 33</div>
                   </div>
                 </div>
 
@@ -47,7 +47,7 @@ export default function ContactSection() {
                   </div>
                   <div>
                     <div className="text-gray-600 mb-1 uppercase tracking-wider" style={{ fontSize: '11px' }}>Email</div>
-                    <div style={{ fontSize: '13px' }}>info@bannalp.ch</div>
+                    <div style={{ fontSize: '13px' }}>mail@bannalp.ch</div>
                   </div>
                 </div>
 
@@ -58,8 +58,8 @@ export default function ContactSection() {
                   <div>
                     <div className="text-gray-600 mb-1 uppercase tracking-wider" style={{ fontSize: '11px' }}>Öffnungszeiten</div>
                     <div style={{ fontSize: '13px' }}>
-                      Mo-Fr: 08:30 - 16:30<br />
-                      Sa-So: 08:00 - 17:00
+                      08:00 - 12:00<br />
+                      13:00 - 17:00
                     </div>
                   </div>
                 </div>

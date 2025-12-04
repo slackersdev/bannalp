@@ -1,7 +1,9 @@
 import { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'motion/react';
+import { ChevronDown } from 'lucide-react';
 import imgLogo from "figma:asset/ffb797a5013414fb5ec5ef7942c0d0d67acbb767.png";
 
-type Page = 'home' | 'gastronomie' | 'winter' | 'sommer' | 'info';
+type Page = 'home' | 'gastronomie' | 'winter' | 'sommer' | 'preise' | 'info';
 
 interface HeaderProps {
   onNavigate: (page: Page) => void;
@@ -9,6 +11,7 @@ interface HeaderProps {
 
 export default function Header({ onNavigate }: HeaderProps) {
   const [scrolled, setScrolled] = useState(false);
+  const [isInfoOpen, setIsInfoOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -45,6 +48,12 @@ export default function Header({ onNavigate }: HeaderProps) {
             Home
           </button>
           <button
+            onClick={() => scrollToSection('news')}
+            className={`transition-colors hover:opacity-70 ${scrolled ? 'text-black' : 'text-white'}`}
+          >
+            Aktuelles
+          </button>
+          <button
             onClick={() => scrollToSection('lifts')}
             className={`transition-colors hover:opacity-70 ${scrolled ? 'text-black' : 'text-white'}`}
           >
@@ -66,14 +75,48 @@ export default function Header({ onNavigate }: HeaderProps) {
             onClick={() => onNavigate('gastronomie')}
             className={`transition-colors hover:opacity-70 ${scrolled ? 'text-black' : 'text-white'}`}
           >
-            Gastronomie / Unterkünfte
+            Gastro / Unterkünfte
           </button>
-          <button
-            onClick={() => handlePlaceholderClick('Info')}
-            className={`transition-colors hover:opacity-70 ${scrolled ? 'text-black' : 'text-white'}`}
-          >
-            Info
-          </button>
+          <div className="relative">
+            <button
+              onClick={() => setIsInfoOpen(!isInfoOpen)}
+              className={`flex items-center gap-1 transition-colors hover:opacity-70 ${scrolled ? 'text-black' : 'text-white'}`}
+            >
+              Info
+              <ChevronDown size={16} className={`transition-transform ${isInfoOpen ? 'rotate-180' : ''}`} />
+            </button>
+
+            <AnimatePresence>
+              {isInfoOpen && (
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: 10 }}
+                  transition={{ duration: 0.2 }}
+                  className="absolute top-full right-0 mt-2 w-48 bg-white rounded-xl shadow-xl border border-gray-100 py-2 z-50 overflow-hidden"
+                >
+                  <button
+                    onClick={() => {
+                      onNavigate('preise');
+                      setIsInfoOpen(false);
+                    }}
+                    className="block w-full text-left px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-blue-600 transition-colors text-sm font-medium border-b border-gray-50"
+                  >
+                    Preise
+                  </button>
+                  <button
+                    onClick={() => {
+                      scrollToSection('contact');
+                      setIsInfoOpen(false);
+                    }}
+                    className="block w-full text-left px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-blue-600 transition-colors text-sm font-medium"
+                  >
+                    Kontakt
+                  </button>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
         </nav>
       </div>
     </header>

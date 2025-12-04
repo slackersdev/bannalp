@@ -10,12 +10,14 @@ import Footer from "./components/Footer";
 import GastronomieSection from "./components/GastronomieSection";
 import WinterSection from "./components/WinterSection";
 import SummerSection from "./components/SummerSection";
+import PricesSection from "./components/PricesSection";
 
 type Page =
   | "home"
   | "gastronomie"
   | "winter"
   | "sommer"
+  | "preise"
   | "info";
 
 export default function App() {
@@ -45,6 +47,15 @@ export default function App() {
     return (
       <div className="min-h-screen bg-gray-900">
         <SummerSection onBack={() => setCurrentPage("home")} />
+        <Footer />
+      </div>
+    );
+  }
+
+  if (currentPage === "preise") {
+    return (
+      <div className="min-h-screen bg-white">
+        <PricesSection onBack={() => setCurrentPage("home")} />
         <Footer />
       </div>
     );

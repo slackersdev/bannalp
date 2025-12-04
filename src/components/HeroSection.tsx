@@ -34,7 +34,7 @@ export default function HeroSection() {
           <div className="flex gap-4">
             <button
               onClick={() => document.getElementById('lifts')?.scrollIntoView({ behavior: 'smooth' })}
-              className="px-8 py-4 bg-white text-black rounded-md hover:bg-gray-100 transition-all"
+              className="px-8 py-4 bg-transparent border border-white text-white rounded-md hover:bg-white/10 transition-all"
             >
               Lift Status
             </button>
