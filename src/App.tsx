@@ -11,6 +11,8 @@ import GastronomieSection from "./components/GastronomieSection";
 import WinterSection from "./components/WinterSection";
 import SummerSection from "./components/SummerSection";
 import PricesSection from "./components/PricesSection";
+import AdminStatusPage from "./components/AdminStatusPage";
+import { StatusProvider } from "./contexts/StatusContext";
 
 type Page =
   | "home"
@@ -18,10 +20,21 @@ type Page =
   | "winter"
   | "sommer"
   | "preise"
+  | "admin"
   | "info";
 
-export default function App() {
-  const [currentPage, setCurrentPage] = useState<Page>("home");
+function AppContent() {
+  const [currentPage, setCurrentPage] = useState<Page>(() => {
+    // Check if URL is /admin/status
+    if (window.location.pathname === '/admin/status') {
+      return 'admin';
+    }
+    return 'home';
+  });
+
+  if (currentPage === "admin") {
+    return <AdminStatusPage onBack={() => setCurrentPage("home")} />;
+  }
 
   if (currentPage === "gastronomie") {
     return (
@@ -74,5 +87,13 @@ export default function App() {
       </main>
       <Footer />
     </div>
+  );
+}
+
+export default function App() {
+  return (
+    <StatusProvider>
+      <AppContent />
+    </StatusProvider>
   );
 }

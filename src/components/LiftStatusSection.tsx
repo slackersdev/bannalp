@@ -2,6 +2,7 @@
 import { Circle, Sun, Snowflake, Cable, User, Utensils, Bike, Camera, MoreHorizontal, X } from 'lucide-react';
 import { useState } from 'react';
 import imgBergbahnenOutline from "figma:asset/4240127d035aa74e045e43dcf529229afaa4d4fa.png";
+import { useStatus } from '../contexts/StatusContext';
 
 const lifts = [
   {
@@ -124,46 +125,8 @@ const summerRoutes = [
   },
 ];
 
-// Year-Round Facilities Status
-const yearRoundFacilities = {
-  luftseilbahn: [
-    { name: 'Fell-Chrüzhütte, Bannalp', status: 'open' },
-    { name: 'Fellboden-Bannalpsee', status: 'open' }
-  ],
-  wanderweg: [
-    { name: 'Zwärgliweg (Kinderwanderweg)', status: 'open' },
-    { name: 'Walenpfad (Höhenwanderweg)', status: 'open' }
-  ],
-  alpwirtschaft: [
-    { name: 'Lägernbeiz', status: 'open' },
-    { name: 'Chrüzhütte', status: 'open' },
-    { name: 'Oberfeld', status: 'closed' },
-    { name: 'Alp Haghütte (Alpbeiz mit Käserei)', status: 'open' }
-  ],
-  berggasthaus: [
-    { name: 'Heimelig', status: 'open' },
-    { name: 'Urnerstaffel', status: 'open' },
-    { name: 'Bannalpsee', status: 'closed' }
-  ]
-};
-
-// Winter-Specific Facilities Status
-const winterFacilities = {
-  skilift: [
-    { name: 'Chrüzhütte-Nätschboden', status: 'open' },
-    { name: 'Urnerstaffel-Nätschboden', status: 'closed' }
-  ],
-  schneeschuhpfad: [
-    { name: 'Chrüzhütte-Nätschboden', status: 'open' },
-    { name: 'Chrüzhütte-Bannalpsee-Urnerstaffel', status: 'open' },
-    { name: 'Chrüzhütte', status: 'open' }
-  ],
-  schneebar: [
-    { name: 'Nätschboden', status: 'open' }
-  ]
-};
-
 export default function LiftStatusSection() {
+  const { yearRoundFacilities, winterFacilities } = useStatus();
   const [hoveredLift, setHoveredLift] = useState<number | null>(null);
   const [season, setSeason] = useState<'winter' | 'summer'>('winter');
   const [activeFilters, setActiveFilters] = useState<string[]>([]);
