@@ -1,1 +1,11 @@
-# bannalp
+
+  # Seasonal Website for Bannalp
+
+  This is a code bundle for Seasonal Website for Bannalp. The original project is available at https://www.figma.com/design/62nGufLzpRlfm0oWgVEBJ0/Seasonal-Website-for-Bannalp.
+
+  ## Running the code
+
+  Run `npm i` to install the dependencies.
+
+  Run `npm run dev` to start the development server.
+  
