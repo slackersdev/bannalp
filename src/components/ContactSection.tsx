@@ -11,13 +11,13 @@ export default function ContactSection() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="font-['Krona_One:Regular',sans-serif] mb-12 border-b-2 border-gray-300 pb-4" style={{ fontSize: 'clamp(2rem, 5vw, 4rem)' }}>
+          <h2 className="mb-12 border-b-2 border-gray-300 pb-4" style={{ fontSize: 'clamp(2rem, 5vw, 4rem)' }}>
             Kontakt
           </h2>
 
           <div className="grid lg:grid-cols-2 gap-12">
             <div>
-              <h3 className="font-['Krona_One:Regular',sans-serif] mb-6 uppercase tracking-wider border-b border-gray-300 pb-3">
+              <h3 className="mb-6 uppercase tracking-wider border-b border-gray-300 pb-3">
                 Kontaktieren Sie uns
               </h3>
               <div className="space-y-6">
@@ -67,7 +67,7 @@ export default function ContactSection() {
             </div>
 
             <div className="bg-white rounded-md shadow-lg p-8">
-              <h3 className="font-['Krona_One:Regular',sans-serif] mb-6 uppercase tracking-wider border-b border-gray-200 pb-3">
+              <h3 className="mb-6 uppercase tracking-wider border-b border-gray-200 pb-3">
                 Nachricht senden
               </h3>
               <form className="space-y-4">

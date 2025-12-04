@@ -135,7 +135,7 @@ export default function GastronomieSection({ onBack }: GastronomieSectionProps) 
             <ChevronLeft size={20} />
             <span className="uppercase tracking-wide" style={{ fontSize: '13px' }}>Zurück</span>
           </button>
-          <h1 className="font-['Krona_One:Regular',sans-serif]" style={{ fontSize: 'clamp(2rem, 5vw, 3.5rem)' }}>
+          <h1 className="" style={{ fontSize: 'clamp(2rem, 5vw, 3.5rem)' }}>
             Gastronomie & Unterkünfte
           </h1>
         </div>
@@ -191,7 +191,7 @@ export default function GastronomieSection({ onBack }: GastronomieSectionProps) 
                 </div>
 
                 {/* Name */}
-                <h3 className="font-['Krona_One:Regular',sans-serif] mb-3" style={{ fontSize: '20px' }}>
+                <h3 className="mb-3" style={{ fontSize: '20px' }}>
                   {place.name}
                 </h3>
 
@@ -282,7 +282,7 @@ export default function GastronomieSection({ onBack }: GastronomieSectionProps) 
       {/* Info Section */}
       <div className="max-w-7xl mx-auto px-6 md:px-16 lg:px-24 pb-12">
         <div className="bg-blue-50 rounded-md p-8 border border-blue-200">
-          <h3 className="font-['Krona_One:Regular',sans-serif] mb-4" style={{ fontSize: '20px' }}>
+          <h3 className="mb-4" style={{ fontSize: '20px' }}>
             Reservierung empfohlen
           </h3>
           <p className="text-gray-700 mb-4" style={{ fontSize: '14px' }}>

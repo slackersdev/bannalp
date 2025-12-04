@@ -27,7 +27,7 @@ export default function WeatherSection() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="font-['Krona_One:Regular',sans-serif] mb-12 border-b-2 border-gray-300 pb-4" style={{ fontSize: 'clamp(2rem, 5vw, 3rem)' }}>
+          <h2 className="mb-12 border-b-2 border-gray-300 pb-4" style={{ fontSize: 'clamp(2rem, 5vw, 3rem)' }}>
             Wetter & Schneebericht
           </h2>
 
@@ -49,7 +49,7 @@ export default function WeatherSection() {
                     </div>
                     <span style={{ fontSize: '13px' }}>{weatherData.current.wind} km/h</span>
                   </div>
-                  
+
                   <div className="flex items-center justify-between p-3 border border-gray-200 rounded-md">
                     <div className="flex items-center gap-2">
                       <Snowflake className="text-black" size={20} />
@@ -57,7 +57,7 @@ export default function WeatherSection() {
                     </div>
                     <span style={{ fontSize: '13px' }}>{weatherData.current.snowHeight} cm</span>
                   </div>
-                  
+
                   <div className="flex items-center justify-between p-3 border border-gray-200 rounded-md">
                     <div className="flex items-center gap-2">
                       <Thermometer className="text-black" size={20} />
@@ -72,7 +72,7 @@ export default function WeatherSection() {
             {/* Forecast */}
             <div className="lg:col-span-2">
               <div className="bg-white rounded-md shadow-lg p-8">
-                <h3 className="font-['Krona_One:Regular',sans-serif] mb-6 border-b border-gray-200 pb-3 uppercase tracking-wider">
+                <h3 className="mb-6 border-b border-gray-200 pb-3 uppercase tracking-wider">
                   Wettervorhersage
                 </h3>
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -97,7 +97,7 @@ export default function WeatherSection() {
                 </div>
 
                 <div className="mt-8 p-6 bg-black text-white rounded-md shadow-md">
-                  <h4 className="font-['Krona_One:Regular',sans-serif] mb-2 uppercase tracking-wider" style={{ fontSize: '12px' }}>
+                  <h4 className="mb-2 uppercase tracking-wider" style={{ fontSize: '12px' }}>
                     Pistenverhältnisse
                   </h4>
                   <p style={{ fontSize: '13px' }}>Ausgezeichnet - Alle Pisten frisch präpariert</p>

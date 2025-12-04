@@ -14,31 +14,27 @@ export default function AboutSection() {
         >
           <div className="relative">
             <div className="rounded-md overflow-hidden shadow-lg">
-              <img 
-                alt="Bergwanderung" 
-                className="w-full h-auto object-cover" 
-                src={imgBergwanderung} 
+              <img
+                alt="Bergwanderung"
+                className="w-full h-auto object-cover"
+                src={imgBergwanderung}
               />
             </div>
           </div>
-          
+
           <div>
-            <h2 className="font-['Krona_One:Regular',sans-serif] mb-6 border-b-2 border-gray-300 pb-4" style={{ fontSize: 'clamp(2rem, 5vw, 3rem)' }}>
-              Willkommen am Bannalp
+            <h2 className="mb-6 border-b-2 border-gray-300 pb-4" style={{ fontSize: 'clamp(2rem, 5vw, 3rem)' }}>
+              Willkommen auf der Bannalp
             </h2>
             <div className="space-y-4 text-gray-700">
               <p>
-                Das Bannalp ist ein idyllisches Berggebiet im Herzen der Schweizer Alpen. 
-                Mit modernsten Liftanlagen und perfekt präparierten Pisten bieten wir Ihnen 
-                ein unvergessliches Wintererlebnis.
+                Die Bannalp, ein wahrer Kleinod des Kantons Nidwalden, liegt auf 1600 - 2800 m.ü.M. bei Oberrickenbach - Wolfenschiessen im Engelbergertal.
               </p>
               <p>
-                Unsere Gondelbahn bringt Sie bequem von der Talstation auf über 1.600 Meter Höhe, 
-                wo Sie atemberaubende Panoramablicke und vielfältige Wintersportmöglichkeiten erwarten.
+                Das wunderschöne voralpine Hochtal mit idyllischem Bergsee beeindruckt durch die mächtigen Berge und die einzigartige Natur. Für Gipfelstürmer und Ruhesuchende, für Gross und Klein.
               </p>
               <p>
-                Ob Skifahrer, Snowboarder oder Winterwanderer – bei uns findet jeder sein 
-                persönliches Winterparadies. Moderne Infrastruktur trifft auf unberührte Natur.
+                Das Erholungsgebiet Bannalp ist im Sommer wie im Winter ein Geheimtipp für unvergessliche Ausflüge
               </p>
             </div>
             <div className="mt-8 grid grid-cols-3 gap-6 border-t border-gray-200 pt-8">

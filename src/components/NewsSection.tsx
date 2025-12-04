@@ -43,7 +43,7 @@ export default function NewsSection() {
           viewport={{ once: true }}
         >
           <div className="flex items-center justify-between mb-12 border-b-2 border-gray-300 pb-4">
-            <h2 className="font-['Krona_One:Regular',sans-serif]" style={{ fontSize: 'clamp(2rem, 5vw, 4rem)' }}>
+            <h2 className="" style={{ fontSize: 'clamp(2rem, 5vw, 4rem)' }}>
               Aktuelles
             </h2>
             <button className="hidden md:flex items-center gap-2 text-black hover:opacity-70 transition-opacity uppercase tracking-wider" style={{ fontSize: '12px' }}>
@@ -73,7 +73,7 @@ export default function NewsSection() {
                       {item.category}
                     </div>
                   </div>
-                  
+
                   <div className="p-6">
                     <div className="flex items-center gap-4 text-gray-500 mb-3 border-b border-gray-200 pb-2" style={{ fontSize: '11px' }}>
                       <div className="flex items-center gap-1">
@@ -85,15 +85,15 @@ export default function NewsSection() {
                         <span>{item.time}</span>
                       </div>
                     </div>
-                    
-                    <h3 className="font-['Krona_One:Regular',sans-serif] mb-3 group-hover:text-blue-600 transition-all uppercase tracking-wide" style={{ fontSize: '14px' }}>
+
+                    <h3 className="mb-3 group-hover:text-blue-600 transition-all uppercase tracking-wide" style={{ fontSize: '14px' }}>
                       {item.title}
                     </h3>
-                    
+
                     <p className="text-gray-700 mb-4" style={{ fontSize: '13px', lineHeight: '1.6' }}>
                       {item.excerpt}
                     </p>
-                    
+
                     <div className="flex items-center text-blue-600 hover:text-blue-700 transition-colors uppercase tracking-wider" style={{ fontSize: '11px' }}>
                       <span>Weiterlesen</span>
                       <ChevronRight size={16} className="group-hover:translate-x-1 transition-transform" />

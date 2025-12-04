@@ -100,7 +100,7 @@ export default function SummerSection({ onBack }: SummerSectionProps) {
                         <ChevronLeft size={20} />
                         <span className="uppercase tracking-wide" style={{ fontSize: '13px' }}>Zurück</span>
                     </button>
-                    <h1 className="font-['Krona_One:Regular',sans-serif]" style={{ fontSize: 'clamp(2rem, 5vw, 3.5rem)' }}>
+                    <h1 className="" style={{ fontSize: 'clamp(2rem, 5vw, 3.5rem)' }}>
                         Sommer
                     </h1>
                 </div>
@@ -119,7 +119,7 @@ export default function SummerSection({ onBack }: SummerSectionProps) {
             {/* Summer Activities Section */}
             <div className="max-w-7xl mx-auto px-6 md:px-16 lg:px-24 py-12">
                 <div className="mb-12">
-                    <h2 className="font-['Krona_One:Regular',sans-serif] mb-4" style={{ fontSize: 'clamp(1.5rem, 3vw, 2rem)' }}>
+                    <h2 className="mb-4" style={{ fontSize: 'clamp(1.5rem, 3vw, 2rem)' }}>
                         Sommeraktivitäten
                     </h2>
                     <p className="text-gray-600 max-w-3xl" style={{ fontSize: '15px', lineHeight: '1.8' }}>
@@ -157,7 +157,7 @@ export default function SummerSection({ onBack }: SummerSectionProps) {
                                     </div>
 
                                     {/* Title */}
-                                    <h3 className="font-['Krona_One:Regular',sans-serif] mb-3" style={{ fontSize: '24px' }}>
+                                    <h3 className="mb-3" style={{ fontSize: '24px' }}>
                                         {activity.title}
                                     </h3>
 
@@ -191,7 +191,7 @@ export default function SummerSection({ onBack }: SummerSectionProps) {
 
             {/* Summer Information Section */}
             <div className="max-w-7xl mx-auto px-6 md:px-16 lg:px-24 pb-12">
-                <h2 className="font-['Krona_One:Regular',sans-serif] mb-6" style={{ fontSize: 'clamp(1.5rem, 3vw, 2rem)' }}>
+                <h2 className="mb-6" style={{ fontSize: 'clamp(1.5rem, 3vw, 2rem)' }}>
                     Wichtige Informationen
                 </h2>
 
@@ -218,7 +218,7 @@ export default function SummerSection({ onBack }: SummerSectionProps) {
             {/* Call to Action */}
             <div className="max-w-7xl mx-auto px-6 md:px-16 lg:px-24 pb-12">
                 <div className="bg-blue-600 rounded-md p-8 text-white text-center">
-                    <h3 className="font-['Krona_One:Regular',sans-serif] mb-4" style={{ fontSize: '24px' }}>
+                    <h3 className="mb-4" style={{ fontSize: '24px' }}>
                         Bereit für Ihr Sommerabenteuer?
                     </h3>
                     <p className="mb-6 max-w-2xl mx-auto" style={{ fontSize: '15px', lineHeight: '1.8' }}>

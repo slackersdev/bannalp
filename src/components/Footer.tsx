@@ -14,7 +14,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="font-['Krona_One:Regular',sans-serif] mb-4 uppercase tracking-wider border-b border-slate-600 pb-2" style={{ fontSize: '12px' }}>Links</h4>
+            <h4 className="mb-4 uppercase tracking-wider border-b border-slate-600 pb-2" style={{ fontSize: '12px' }}>Links</h4>
             <ul className="space-y-2 text-slate-300">
               <li><a href="#hero" className="hover:text-white transition-colors uppercase tracking-wide" style={{ fontSize: '11px' }}>Home</a></li>
               <li><a href="#about" className="hover:text-white transition-colors uppercase tracking-wide" style={{ fontSize: '11px' }}>Über uns</a></li>
@@ -24,7 +24,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="font-['Krona_One:Regular',sans-serif] mb-4 uppercase tracking-wider border-b border-slate-600 pb-2" style={{ fontSize: '12px' }}>Information</h4>
+            <h4 className="mb-4 uppercase tracking-wider border-b border-slate-600 pb-2" style={{ fontSize: '12px' }}>Information</h4>
             <ul className="space-y-2 text-slate-300">
               <li><a href="#" className="hover:text-white transition-colors uppercase tracking-wide" style={{ fontSize: '11px' }}>Preise</a></li>
               <li><a href="#" className="hover:text-white transition-colors uppercase tracking-wide" style={{ fontSize: '11px' }}>Anfahrt</a></li>
@@ -34,7 +34,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="font-['Krona_One:Regular',sans-serif] mb-4 uppercase tracking-wider border-b border-slate-600 pb-2" style={{ fontSize: '12px' }}>Folgen Sie uns</h4>
+            <h4 className="mb-4 uppercase tracking-wider border-b border-slate-600 pb-2" style={{ fontSize: '12px' }}>Folgen Sie uns</h4>
             <div className="flex gap-4">
               <a href="#" className="w-10 h-10 bg-slate-600 rounded-md flex items-center justify-center hover:bg-slate-500 transition-colors">
                 <Facebook size={20} />
