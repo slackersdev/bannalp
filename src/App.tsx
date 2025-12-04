@@ -9,6 +9,7 @@ import ContactSection from "./components/ContactSection";
 import Footer from "./components/Footer";
 import GastronomieSection from "./components/GastronomieSection";
 import WinterSection from "./components/WinterSection";
+import SummerSection from "./components/SummerSection";
 
 type Page =
   | "home"
@@ -35,6 +36,15 @@ export default function App() {
     return (
       <div className="min-h-screen bg-gray-900">
         <WinterSection onBack={() => setCurrentPage("home")} />
+        <Footer />
+      </div>
+    );
+  }
+
+  if (currentPage === "sommer") {
+    return (
+      <div className="min-h-screen bg-gray-900">
+        <SummerSection onBack={() => setCurrentPage("home")} />
         <Footer />
       </div>
     );
