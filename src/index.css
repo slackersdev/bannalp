@@ -165,10 +165,17 @@
     font-feature-settings: var(--default-font-feature-settings, normal);
     font-variation-settings: var(--default-font-variation-settings, normal);
     -webkit-tap-highlight-color: transparent;
+    scroll-padding-top: 100px;
+    scroll-behavior: smooth;
   }
 
   body {
     line-height: inherit;
+    /* Ensure footer doesn't overlap content if needed, though this is usually handled by layout */
+  }
+
+  button {
+    cursor: pointer;
   }
 
   hr {
@@ -2124,4 +2131,32 @@ html {
   .md\:flex {
     display: flex !important;
   }
+}
+
+.max-w-xs {
+  max-width: 20rem;
+}
+
+.max-w-sm {
+  max-width: 24rem;
+}
+
+.bg-slate-500 {
+  background-color: var(--color-slate-500);
+}
+
+.hover\:bg-slate-600:hover {
+  background-color: var(--color-slate-600);
+}
+
+.max-w-login {
+  max-width: 22rem;
+}
+
+.bg-black {
+  background-color: #000;
+}
+
+.hover\:bg-gray-800:hover {
+  background-color: var(--color-gray-800);
 }

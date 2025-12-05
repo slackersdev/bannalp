@@ -25,15 +25,18 @@ type Page =
 
 function AppContent() {
   const [currentPage, setCurrentPage] = useState<Page>(() => {
-    // Check if URL is /admin/status
-    if (window.location.pathname === '/admin/status') {
+    // Check if URL has #admin
+    if (window.location.hash === '#admin') {
       return 'admin';
     }
     return 'home';
   });
 
   if (currentPage === "admin") {
-    return <AdminStatusPage onBack={() => setCurrentPage("home")} />;
+    return <AdminStatusPage onBack={() => {
+      window.location.hash = '';
+      setCurrentPage("home");
+    }} />;
   }
 
   if (currentPage === "gastronomie") {

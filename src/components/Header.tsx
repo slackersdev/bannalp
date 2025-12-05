@@ -35,9 +35,15 @@ export default function Header({ onNavigate }: HeaderProps) {
   }, []);
 
   const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    element?.scrollIntoView({ behavior: 'smooth' });
     setIsMenuOpen(false);
+
+    // Small timeout to ensure menu closing animation starts/doesn't block scroll
+    setTimeout(() => {
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 100);
   };
 
   const handleNavigate = (page: Page) => {

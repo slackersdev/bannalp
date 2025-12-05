@@ -10,6 +10,7 @@ interface AdminStatusPageProps {
 export default function AdminStatusPage({ onBack }: AdminStatusPageProps) {
     const { yearRoundFacilities, winterFacilities, updateStatus } = useStatus();
     const [isAuthenticated, setIsAuthenticated] = useState(false);
+    const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const [error, setError] = useState("");
 
@@ -22,7 +23,7 @@ export default function AdminStatusPage({ onBack }: AdminStatusPageProps) {
 
     const handleLogin = (e: React.FormEvent) => {
         e.preventDefault();
-        if (password === "bannalp") {
+        if (password === "bannalp25") {
             setIsAuthenticated(true);
             sessionStorage.setItem("admin_auth", "true");
             setError("");
@@ -35,53 +36,68 @@ export default function AdminStatusPage({ onBack }: AdminStatusPageProps) {
         setIsAuthenticated(false);
         sessionStorage.removeItem("admin_auth");
         setPassword("");
+        setUsername("");
     };
 
     if (!isAuthenticated) {
         return (
-            <div className="min-h-screen bg-gray-50 flex items-center justify-center p-4 font-sans">
-                <div className="w-full max-w-[400px] bg-white rounded-lg shadow-xl overflow-hidden">
-                    <div className="p-10">
-                        <div className="flex justify-center mb-8">
-                            <img src={imgLogo} alt="Bannalp Logo" className="h-16 w-auto" />
-                        </div>
-                        <h2 className="text-xl font-bold text-center text-gray-900 mb-2 uppercase tracking-wider">
-                            Admin Login
+            <div className="min-h-screen flex items-center justify-center p-4 font-sans bg-gray-50">
+                <div className="w-full max-w-login bg-white rounded-xl shadow-2xl p-8 sm:p-10">
+                    <div className="flex flex-col items-center mb-8">
+                        <img src={imgLogo} alt="Bannalp Logo" className="h-16 w-auto mb-6" />
+                        <h2 className="text-2xl font-bold text-slate-600 font-heading">
+                            Login
                         </h2>
-                        <p className="text-center text-gray-500 mb-8 text-xs uppercase tracking-widest">
-                            Status Verwaltung
-                        </p>
+                    </div>
 
-                        <form onSubmit={handleLogin} className="space-y-5">
-                            <div>
-                                <input
-                                    type="password"
-                                    value={password}
-                                    onChange={(e) => setPassword(e.target.value)}
-                                    className="w-full px-4 py-3 border border-gray-200 rounded-md focus:ring-1 focus:ring-gray-900 focus:border-gray-900 outline-none transition-all bg-gray-50 text-sm placeholder:text-gray-400"
-                                    placeholder="PASSWORT EINGEBEN"
-                                />
-                                {error && (
-                                    <p className="mt-2 text-xs text-red-600 uppercase tracking-wide font-medium text-center">{error}</p>
-                                )}
-                            </div>
-
-                            <button
-                                type="submit"
-                                className="w-full bg-gray-900 hover:bg-black text-white font-medium py-3 px-4 rounded-md transition-colors duration-200 uppercase tracking-widest text-xs"
-                            >
-                                Anmelden
-                            </button>
-                        </form>
-
-                        <div className="mt-8 text-center">
-                            <button
-                                onClick={onBack}
-                                className="text-[10px] text-gray-400 hover:text-gray-600 font-medium uppercase tracking-widest transition-colors"
-                            >
-                                ← Zurück zur Website
-                            </button>
+                    <form onSubmit={handleLogin} className="space-y-6">
+                        <div className="space-y-2">
+                            <label className="text-sm font-bold text-slate-700 block" htmlFor="username">
+                                Username
+                            </label>
+                            <input
+                                id="username"
+                                type="text"
+                                value={username}
+                                onChange={(e) => setUsername(e.target.value)}
+                                className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-slate-500 focus:ring-1 focus:ring-slate-500 outline-none transition-all text-sm text-gray-600 placeholder:text-gray-400"
+                                placeholder="Username"
+                            />
                         </div>
+
+                        <div className="space-y-2">
+                            <label className="text-sm font-bold text-slate-700 block" htmlFor="password">
+                                Password
+                            </label>
+                            <input
+                                id="password"
+                                type="password"
+                                value={password}
+                                onChange={(e) => setPassword(e.target.value)}
+                                className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-slate-500 focus:ring-1 focus:ring-slate-500 outline-none transition-all text-sm text-gray-600 placeholder:text-gray-400"
+                                placeholder="Password"
+                            />
+                        </div>
+
+                        {error && (
+                            <p className="text-xs text-red-600 font-medium text-center">{error}</p>
+                        )}
+
+                        <button
+                            type="submit"
+                            className="w-full bg-black hover:bg-gray-800 text-white font-bold py-3.5 px-4 rounded-full transition-colors duration-200 text-sm mt-4 shadow-md hover:shadow-lg"
+                        >
+                            Login
+                        </button>
+                    </form>
+
+                    <div className="mt-8 text-center">
+                        <button
+                            onClick={onBack}
+                            className="text-xs text-slate-400 hover:text-slate-600 font-medium transition-colors"
+                        >
+                            Zurück zur Website
+                        </button>
                     </div>
                 </div>
             </div>
@@ -113,7 +129,7 @@ export default function AdminStatusPage({ onBack }: AdminStatusPageProps) {
                 </div>
             </header>
 
-            <main className="max-w-7xl mx-auto px-6 md:px-16 lg:px-24 py-12">
+            <main className="max-w-4xl mx-auto px-6 md:px-16 lg:px-24 py-12">
                 <div className="grid lg:grid-cols-2 gap-8">
 
                     {/* Left Column - Year Round (White) */}

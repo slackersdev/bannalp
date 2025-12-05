@@ -4,7 +4,7 @@
 The admin status page allows you to manage the status (Offen/Geschlossen) of all facilities on the Bannalp website in real-time.
 
 ## Accessing the Admin Page
-Navigate to: `http://localhost:5173/admin/status` (or your production URL + `/admin/status`)
+Navigate to: `http://localhost:3000/#admin` (or your production URL + `/#admin`)
 
 ## Login Credentials
 - **Password**: `bannalp25`
