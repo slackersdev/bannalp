@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
 import { Cloud, Wind, Snowflake, Thermometer, Sun, CloudRain, CloudLightning, CloudFog, Compass } from 'lucide-react';
+import imgLivecamPreview from "../assets/livecam-placeholder.png";
 
 // WMO Weather interpretation codes (WW)
 const getWeatherIcon = (code: number) => {
@@ -142,7 +143,7 @@ export default function LivecamSection() {
               >
                 <div className="aspect-[4/3] w-full relative">
                   <img
-                    src="/src/assets/livecam-placeholder.png"
+                    src={imgLivecamPreview}
                     alt="Livecam Bannalpsee"
                     className="w-full h-full object-cover"
                   />
