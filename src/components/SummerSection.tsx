@@ -1,6 +1,5 @@
 import { motion } from 'motion/react';
 import { ChevronLeft, Sun, Footprints, Mountain, Heart } from 'lucide-react';
-import { ImageWithFallback } from './figma/ImageWithFallback';
 
 interface SummerSectionProps {
     onBack: () => void;

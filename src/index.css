@@ -2114,3 +2114,14 @@ html {
   inherits: false;
   initial-value: 1;
 }
+
+/* Manual Tailwind patches for missing responsive classes */
+@media (min-width: 768px) {
+  .md\:hidden {
+    display: none !important;
+  }
+
+  .md\:flex {
+    display: flex !important;
+  }
+}

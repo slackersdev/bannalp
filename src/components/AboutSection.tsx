@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import imgBergwanderung from "figma:asset/d10a0fa8819e47aca3bf5a735f5093a541cfd566.png";
+import imgBergwanderung from "../assets/d10a0fa8819e47aca3bf5a735f5093a541cfd566.png";
 
 export default function AboutSection() {
   return (

@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useStatus } from "../contexts/StatusContext";
 import { ArrowLeft, LogOut } from "lucide-react";
-import imgLogo from "figma:asset/ffb797a5013414fb5ec5ef7942c0d0d67acbb767.png";
+import imgLogo from "../assets/logo/Bannalp_logo.png";
 
 interface AdminStatusPageProps {
     onBack: () => void;

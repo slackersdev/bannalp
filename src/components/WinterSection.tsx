@@ -1,6 +1,5 @@
 import { motion } from 'motion/react';
 import { ChevronLeft, Snowflake, Mountain, Users } from 'lucide-react';
-import { ImageWithFallback } from './figma/ImageWithFallback';
 
 interface WinterSectionProps {
   onBack: () => void;

@@ -1,7 +1,7 @@
 ﻿import { motion } from 'motion/react';
 import { Circle, Sun, Snowflake, Cable, User, Utensils, Bike, Camera, MoreHorizontal, X } from 'lucide-react';
 import { useState } from 'react';
-import imgBergbahnenOutline from "figma:asset/4240127d035aa74e045e43dcf529229afaa4d4fa.png";
+import imgBergbahnenOutline from "../assets/4240127d035aa74e045e43dcf529229afaa4d4fa.png";
 import { useStatus } from '../contexts/StatusContext';
 
 const lifts = [

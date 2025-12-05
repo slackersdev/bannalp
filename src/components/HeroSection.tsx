@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import imgBannalpWinter from "figma:asset/65708ab69da50f32e7792a962a692bc5962fed60.png";
+import imgBannalpWinter from "../assets/65708ab69da50f32e7792a962a692bc5962fed60.png";
 import { ChevronDown } from 'lucide-react';
 
 export default function HeroSection() {
